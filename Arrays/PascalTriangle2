@@ -1,0 +1,22 @@
+import java.util.Scanner;
+//Given the row number so we have to print that whole rows element
+class Main35{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Row number");
+        int r=sc.nextInt();
+        PascalTriangle2 obj=new PascalTriangle2();
+        obj.pascalTriangle2(r);
+    }
+}
+public class PascalTriangle2 {
+    void pascalTriangle2(int row){
+        int ans=1;
+        System.out.print(ans +" ");
+        for (int i = 1; i < row; i++) {
+            ans=ans*(row-i);
+            ans=ans/i;
+            System.out.print(ans+" ");
+        }
+    }
+}
